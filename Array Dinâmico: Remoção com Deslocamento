@@ -1,0 +1,11 @@
+public void remove(int indice) {
+    if (indice < 0 || indice >= tamanho)
+        throw new IndexOutOfBoundsException("Indice invalido: " + indice);
+
+    // TODO 1: desloca todos os elementos uma posição para a esquerda
+    for (int i = indice; i < tamanho - 1; i++)
+        dados[i] = dados[i + 1];
+
+    // TODO 2: decrementa tamanho
+    tamanho--;
+}
