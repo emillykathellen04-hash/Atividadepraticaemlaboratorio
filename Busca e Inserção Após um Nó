@@ -1,0 +1,15 @@
+public Node find(Object item) {
+    Node atual = head;
+    while (atual != null) {
+        if (atual.item.equals(item)) return atual; // encontrou!
+        atual = atual.next;
+    }
+    return null; // não encontrou
+}
+
+public void insertAfter(Node x, Object item) {
+    if (x == null) return;
+    Node novo = new Node(item);   // TODO 1: cria novo nó
+    novo.next = x.next;           // TODO 2: novo aponta para o próximo de x
+    x.next = novo;                // TODO 3: x passa a apontar para novo
+}
